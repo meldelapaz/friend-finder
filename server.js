@@ -5,7 +5,7 @@ var path       = require('path');
 
 
 //SETS UP THE EXPRESS APP
-var PORT = 8080;
+var PORT = process.env.PORT || 8080;
 var app  = express();
 
 //SETS UP THE EXPRESS APP TO HANDLE DATA PARSING
@@ -17,7 +17,7 @@ app.use(bodyParser.json({type: 'application/vnd.api.json'}));
 app.use(express.static('app/public'));
 
 require('./app/routing/htmlRoutes.js')(app);
-require('./app/routing/apiRoutes.js')(app);
+//require('./app/routing/apiRoutes.js')(app);
 
 app.listen(PORT, function(){
     console.log('Server listening on %d', PORT)
