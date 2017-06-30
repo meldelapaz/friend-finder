@@ -12,8 +12,8 @@ $(document).ready(function() {
         var input = [];
 
         var pushAnswers = {
-            // name: $('#name').val(),
-            // image: $('#photo').val(),
+            name: $('#name').val(),
+            image: $('#photo').val(),
             q1:  $('input[name=q1]:checked').val(),
             q2:  $('input[name=q2]:checked').val(),
             q3:  $('input[name=q3]:checked').val(),

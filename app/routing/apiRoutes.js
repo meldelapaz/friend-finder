@@ -37,11 +37,11 @@ module.exports = function(app) {
 
             // Pushing the difference between scores in differenceArray
             for (var j = 0; j < animals[i].scores.length; j++) {
-                differenceArray.push(Math.abs(req.body.scores[j] - animals[i].scores[j]))
+                differenceArray.push(Math.abs(scores[j] - animals[i].scores[j]))
             }
             console.log('differenceArray: ' + differenceArray);
 
-            // 
+            //
             for (var k = 0; k < differenceArray.length; k++) {
                 totalDifference += differenceArray[k];
             }
